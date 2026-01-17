@@ -40,7 +40,7 @@ const Login = () => {
       if (data.success) {
         setAtoken(data.atoken);
         localStorage.setItem("atoken", data.atoken);
-        alert(`Admin logged-in!\natoken: ${data.atoken}`);
+        // alert(`Admin logged-in!\natoken: ${data.atoken}`);
         // toast.success(`Admin logged-in! atoken: ${data.atoken}`);
       } else {
         toast.error(data.message);
@@ -59,7 +59,7 @@ const Login = () => {
       if (data.success) {
         setDtoken(data.dtoken);
         localStorage.setItem("dtoken", data.dtoken);
-        alert(`Doctor logged-in!\ndtoken: ${data.dtoken}`);
+        // alert(`Doctor logged-in!\ndtoken: ${data.dtoken}`);
         // toast.success(`Doctor logged-in!\natoken: ${data.dtoken}`);
       } else {
         toast.error(data.message);
