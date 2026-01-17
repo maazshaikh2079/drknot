@@ -40,8 +40,9 @@ app.get("/", (_, res) =>
 app.get("/favicon.ico", (req, res) => res.status(204).end());
 
 app.listen(PORT, () => {
-  console.log(`log> Local server running on PORT:${PORT}`);
-  console.log(`log> Health Check: http://localhost:${PORT}/`);
+  console.log(`log> DrKnot Backend Server Running!`);
+  // console.log(`log> Local server running on PORT:${PORT}`);
+  // console.log(`log> Health Check: http://localhost:${PORT}/`);
 });
 
 export default app;
