@@ -1,0 +1,229 @@
+Doctors Credentials:-
+doc01 > email:drrichard@demo.com | password:drrichard1234
+doc02 > email:dremily@demo.com | password:dremily1234
+doc03 > email:drsarah@demo.com | password:drsarah1234
+doc04 > email:drchristopherlee@demo.com | password:drchristopherlee1234
+doc05 > email:drjennifer@demo.com | password:drjennifer1234
+doc06 > email:drandrew@demo.com | password:drandrew1234
+doc07 > email:drchristopherdavis@demo.com | password:drchristopherdavis1234
+doc08 > email:drtimothy@demo.com | password:drtimothy1234
+doc09 > email:drava@demo.com | password:drava1234
+doc10 > email:drjeffrey@demo.com | password:drjeffrey1234
+doc11 > email:drzoe@demo.com | password:drzoe1234
+doc12 > email:drpatrick@demo.com | password:drpatrick1234
+doc13 > email:drchloe@demo.com | password:drchloe1234
+doc14 > email:drryan@demo.com | password:drryan1234
+doc15 > email:dramelia@demo.com | password:dramelia1234
+
+doc1:-
+name:Dr. Richard James
+email:drrichard@demo.com
+password:drrichard1234
+speciality:General-Physician
+degree:MBBS, MD
+experience:4 Years
+about:Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies as a General Physician.
+fees:50
+address:{"line1":"17th Cross, Richmond","line2":"Circle, Ring Road, London"}
+-----------------------------------
+doc2:-
+name:Dr. Emily Larson
+email:dremily@demo.com
+password:dremily1234
+speciality:Gynecologist
+degree:MBBS, MS
+experience:3 Years
+about:Dr. Emily Larson is dedicated to women's health, offering expert care in gynecology with a focus on comprehensive wellness and patient-centered treatment strategies.
+fees:60
+address:{"line1":"27th Baker Street","line2":"Marylebone, London"}
+-----------------------------------
+doc3:-
+name:Dr. Sarah Patel
+email:drsarah@demo.com
+password:drsarah1234
+speciality:Dermatologist
+degree:MBBS, MD (Dermatology)
+experience:1 Years
+about:Dr. Sarah Patel specializes in dermatological care, focusing on skin health, early diagnosis of skin conditions, and providing effective aesthetic and medical treatments.
+fees:30
+address:{"line1":"37th Kensington High St","line2":"Kensington, London"}
+-----------------------------------
+doc4:-
+name:Dr. Christopher Lee
+email:drchristopherlee@demo.com
+password:drchristopherlee1234
+speciality:Pediatricians
+degree:MBBS, MD (Pediatrics)
+experience:2 Years
+about:Dr. Christopher Lee is passionate about pediatric care, ensuring that infants, children, and adolescents receive the best possible medical attention and preventive health guidance.
+fees:40
+address:{"line1":"47th Piccadilly Circus","line2":"Westminster, London"}
+-----------------------------------
+doc5:-
+name:Dr. Jennifer Garcia
+email:drjennifer@demo.com
+password:drjennifer1234
+speciality:Neurologist
+degree:MBBS, DM (Neurology)
+experience:4 Years
+about:Dr. Jennifer Garcia focuses on diagnosing and treating complex neurological disorders, committed to improving patient quality of life through advanced medical strategies.
+fees:50
+address:{"line1":"57th Fleet Street","line2":"City of London, London"}
+-----------------------------------
+doc6:-
+name:Dr. Andrew Williams
+email:drandrew@demo.com
+password:drandrew1234
+speciality:Neurologist
+degree:MBBS, MD
+experience:4 Years
+about:Dr. Andrew Williams provides specialized care in neurology, with a strong emphasis on early intervention and personalized treatment plans for nervous system health.
+fees:50
+address:{"line1":"12th Canary Wharf","line2":"Tower Hamlets, London"}
+-----------------------------------
+doc7:-
+name:Dr. Christopher Davis
+email:drchristopherdavis@demo.com
+password:drchristopherdavis1234
+speciality:General-Physician
+degree:MBBS
+experience:4 Years
+about:Dr. Christopher Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.
+fees:50
+address:{"line1":"88th Oxford Street","line2":"Fitzrovia, London"}
+-----------------------------------
+doc8:-
+name:Dr. Timothy White
+email:drtimothy@demo.com
+password:drtimothy1234
+speciality:Gynecologist
+degree:MBBS, MD
+experience:3 Years
+about:Dr. Timothy White brings extensive knowledge to gynecological health, focusing on patient education and the delivery of high-quality reproductive medical care.
+fees:60
+address:{"line1":"15th Bond Street","line2":"Mayfair, London"}
+-----------------------------------
+doc9:-
+name:Dr. Ava Mitchell
+email:drava@demo.com
+password:drava1234
+speciality:Dermatologist
+degree:MBBS, MD
+experience:1 Years
+about:Dr. Ava Mitchell is committed to excellence in dermatology, providing modern solutions for skin care and focusing on the long-term dermatological health of her patients.
+fees:30
+address:{"line1":"22nd Knightsbridge","line2":"Belgravia, London"}
+-----------------------------------
+doc10:-
+name:Dr. Jeffrey King
+email:drjeffrey@demo.com
+password:drjeffrey1234
+speciality:Pediatricians
+degree:MBBS, DCH
+experience:2 Years
+about:Dr. Jeffrey King provides compassionate pediatric services, specializing in the physical and emotional development of children from birth through adolescence.
+fees:40
+address:{"line1":"10th Greenwich High Rd","line2":"Greenwich, London"}
+-----------------------------------
+doc11:-
+name:Dr. Zoe Kelly
+email:drzoe@demo.com
+password:drzoe1234
+speciality:Neurologist
+degree:MBBS, MD
+experience:4 Years
+about:Dr. Zoe Kelly is dedicated to neurological excellence, employing the latest diagnostic tools to treat brain and spinal cord disorders with precision and care.
+fees:50
+address:{"line1":"67th Abbey Road","line2":"St. John's Wood, London"}
+-----------------------------------
+doc12:-
+name:Dr. Patrick Harris
+email:drpatrick@demo.com
+password:drpatrick1234
+speciality:Neurologist
+degree:MBBS, MD
+experience:4 Years
+about:Dr. Patrick Harris specializes in neurology, offering comprehensive care for chronic neurological conditions and focusing on innovative recovery strategies.
+fees:50
+address:{"line1":"42nd Camden High St","line2":"Camden Town, London"}
+-----------------------------------
+doc13:-
+name:Dr. Chloe Evans
+email:drchloe@demo.com
+password:drchloe1234
+speciality:General-Physician
+degree:MBBS
+experience:4 Years
+about:Dr. Chloe Evans provides holistic general medical services, emphasizing the importance of preventive health screenings and effective primary care management.
+fees:50
+address:{"line1":"5th Brick Lane","line2":"Shoreditch, London"}
+-----------------------------------
+doc14:-
+name:Dr. Ryan Martinez
+email:drryan@demo.com
+password:drryan1234
+speciality:Gynecologist
+degree:MBBS, MS
+experience:3 Years
+about:Dr. Ryan Martinez offers expert gynecological care, committed to providing a supportive environment for women's health concerns and surgical needs.
+fees:60
+address:{"line1":"19th Portobello Road","line2":"Notting Hill, London"}
+-----------------------------------
+doc15:-
+name:Dr. Amelia Hill
+email:dramelia@demo.com
+password:dramelia1234
+speciality:Dermatologist
+degree:MBBS, MD
+experience:1 Years
+about:Dr. Amelia Hill focuses on clinical dermatology, helping patients manage skin conditions through evidence-based treatments and proactive skin health education.
+fees:30
+address:{"line1":"31st King\'s Road","line2":"Chelsea, London"}
+
+__________________________________________________________________
+
+
+doc1:-
+name=Dr. Richard James&email=drrichard@demo.com&password=drrichard1234&speciality=General-Physician&degree=MBBS&experience=4 Years&about=Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies as a General Physician.&fees=50&address="{\r\n  line1: \"17th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc2:-
+name=Dr. Emily Larson&email=dremily@demo.com&password=dremily1234&speciality=Gynecologist&degree=MBBS&experience=3 Years&about=Dr. Emily Larson is dedicated to women's health, offering expert care in gynecology with a focus on comprehensive wellness and patient-centered treatment strategies.&fees=60&address="{\r\n  line1: \"27th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc3:-
+name=Dr. Sarah Patel&email=drsarah@demo.com&password=drsarah1234&speciality=Dermatologist&degree=MBBS&experience=1 Years&about=Dr. Sarah Patel specializes in dermatological care, focusing on skin health, early diagnosis of skin conditions, and providing effective aesthetic and medical treatments.&fees=30&address="{\r\n  line1: \"37th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc4:-
+name=Dr. Christopher Lee&email=drchristopherlee@demo.com&password=drchristopherlee1234&speciality=Pediatricians&degree=MBBS&experience=2 Years&about=Dr. Christopher Lee is passionate about pediatric care, ensuring that infants, children, and adolescents receive the best possible medical attention and preventive health guidance.&fees=40&address="{\r\n  line1: \"47th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc5:-
+name=Dr. Jennifer Garcia&email=drjennifer@demo.com&password=drjennifer1234&speciality=Neurologist&degree=MBBS&experience=4 Years&about=Dr. Jennifer Garcia focuses on diagnosing and treating complex neurological disorders, committed to improving patient quality of life through advanced medical strategies.&fees=50&address="{\r\n  line1: \"57th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc6:-
+name=Dr. Andrew Williams&email=drandrew@demo.com&password=drandrew1234&speciality=Neurologist&degree=MBBS&experience=4 Years&about=Dr. Andrew Williams provides specialized care in neurology, with a strong emphasis on early intervention and personalized treatment plans for nervous system health.&fees=50&address="{\r\n  line1: \"57th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc7:-
+name=Dr. Christopher Davis&email=drchristopherdavis@demo.com&password=drchristopherdavis1234&speciality=General-Physician&degree=MBBS&experience=4 Years&about=Dr. Christopher Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.&fees=50&address="{\r\n  line1: \"17th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc8:-
+name=Dr. Timothy White&email=drtimothy@demo.com&password=drtimothy1234&speciality=Gynecologist&degree=MBBS&experience=3 Years&about=Dr. Timothy White brings extensive knowledge to gynecological health, focusing on patient education and the delivery of high-quality reproductive medical care.&fees=60&address="{\r\n  line1: \"27th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc9:-
+name=Dr. Ava Mitchell&email=drava@demo.com&password=drava1234&speciality=Dermatologist&degree=MBBS&experience=1 Years&about=Dr. Ava Mitchell is committed to excellence in dermatology, providing modern solutions for skin care and focusing on the long-term dermatological health of her patients.&fees=30&address="{\r\n  line1: \"37th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc10:-
+name=Dr. Jeffrey King&email=drjeffrey@demo.com&password=drjeffrey1234&speciality=Pediatricians&degree=MBBS&experience=2 Years&about=Dr. Jeffrey King provides compassionate pediatric services, specializing in the physical and emotional development of children from birth through adolescence.&fees=40&address="{\r\n  line1: \"47th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc11:-
+name=Dr. Zoe Kelly&email=drzoe@demo.com&password=drzoe1234&speciality=Neurologist&degree=MBBS&experience=4 Years&about=Dr. Zoe Kelly is dedicated to neurological excellence, employing the latest diagnostic tools to treat brain and spinal cord disorders with precision and care.&fees=50&address="{\r\n  line1: \"57th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc12:-
+name=Dr. Patrick Harris&email=drpatrick@demo.com&password=drpatrick1234&speciality=Neurologist&degree=MBBS&experience=4 Years&about=Dr. Patrick Harris specializes in neurology, offering comprehensive care for chronic neurological conditions and focusing on innovative recovery strategies.&fees=50&address="{\r\n  line1: \"57th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc13:-
+name=Dr. Chloe Evans&email=drchloe@demo.com&password=drchloe1234&speciality=General-Physician&degree=MBBS&experience=4 Years&about=Dr. Chloe Evans provides holistic general medical services, emphasizing the importance of preventive health screenings and effective primary care management.&fees=50&address="{\r\n  line1: \"17th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc14:-
+name=Dr. Ryan Martinez&email=drryan@demo.com&password=drryan1234&speciality=Gynecologist&degree=MBBS&experience=3 Years&about=Dr. Ryan Martinez offers expert gynecological care, committed to providing a supportive environment for women's health concerns and surgical needs.&fees=60&address="{\r\n  line1: \"27th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
+-----------------------------------
+doc15:-
+name=Dr. Amelia Hill&email=dramelia@demo.com&password=dramelia1234&speciality=Dermatologist&degree=MBBS&experience=1 Years&about=Dr. Amelia Hill focuses on clinical dermatology, helping patients manage skin conditions through evidence-based treatments and proactive skin health education.&fees=30&address="{\r\n  line1: \"37th Cross, Richmond\",\r\n  line2: \"Circle, Ring Road, London\",\r\n}"
