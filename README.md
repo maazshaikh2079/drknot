@@ -5,7 +5,7 @@ DrKnot is a premier digital health partner dedicated to revolutionizing healthca
 ## 🚀 Vision
 Our vision at **DrKnot** is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.
 
-<h3>🔴 Live: <a href="drknot.vercel.app">drknot.vercel.app</a></h3>
+<h3>🔴 Live: <a href="https://drknot.vercel.app">drknot.vercel.app</a></h3>
 <hr>
 
 ## 🔐 Credentials for Access
