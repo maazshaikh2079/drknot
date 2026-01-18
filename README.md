@@ -7,12 +7,14 @@ Our vision at **DrKnot** is to create a seamless healthcare experience for every
 
 ## 🔗 Live Deployments
 
+> <p align="left">
+>   <font color="#D97706"><i>Note: The backend server may require up to 60 seconds to initialize on the first request. Please refresh the page if the data does not load immediately.</i></font>
+> </p>
+
 | Platform | Deployment Link |
 | :--- | :--- |
 | **🌐 Patient Portal** | [drknot.vercel.app](https://drknot.vercel.app) |
 | **🛠️ Admin & Doctor Panel** | [drknot-panel.vercel.app](https://drknot-panel.vercel.app) |
-
----
 
 ## 🔐 Credentials for Access
 
@@ -40,16 +42,12 @@ Our vision at **DrKnot** is to create a seamless healthcare experience for every
 | **Doc 14** | `drryan@demo.com` | `drryan1234` |
 | **Doc 15** | `dramelia@demo.com` | `dramelia1234` |
 
----
-
 ## 🛠️ Project Structure
 
 The project is divided into three main repositories:
 - **Frontend**: Patient-facing portal for booking and profile management.
 - **Admin/Doctor Panel**: Unified dashboard for administrators to manage doctors and for doctors to manage appointments.
 - **Backend**: Robust Node.js API with MongoDB integration.
-
----
 
 ## 💻 Tech Stack
 
@@ -60,8 +58,6 @@ The project is divided into three main repositories:
 - **Payments**: Razorpay Integration
 - **Cloud Storage**: Cloudinary (for Doctor/User profile images)
 - **Toast Notifications**: React-Toastify
-
----
 
 ## 🔑 Key Features
 
@@ -82,8 +78,6 @@ The project is divided into three main repositories:
 - **Personal Dashboard**: View total earnings and daily appointment count.
 - **Appointment Management**: Mark appointments as 'Completed' or 'Cancelled'.
 - **Profile Edit**: Update personal bio, consultation fees, and availability in real-time.
-
----
 
 ## 📡 All API Endpoints
 
@@ -119,8 +113,6 @@ The project is divided into three main repositories:
 * `PATCH /cancel-appointment`: Cancel a booked appointment.
 * `POST /payment-razorpay`: Initiate payment via Razorpay.
 * `POST /verifyRazorpay`: Confirm and verify payment transaction.
-
----
 
 ## 🛠️ Local Setup Instructions
 
