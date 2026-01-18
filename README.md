@@ -7,10 +7,12 @@ Our vision at **DrKnot** is to create a seamless healthcare experience for every
 
 ## 🔗 Live Deployments
 
-> [!IMPORTANT]
+<!-- > [!IMPORTANT]
 > <p align="left">
 >   <font color="#D97706"><i><b>Cold Start Alert:</b> The backend server may require up to 60 seconds to initialize on the first request. Please refresh the page if the data does not load immediately.</i></font>
-> </p>
+> </p> -->
+> [!WARNING]
+> **Backend Initialization:** The server may require up to 60 seconds to spin up on the first request. Please refresh the page if data does not load immediately.
 
 | Platform | Deployment Link |
 | :--- | :--- |
