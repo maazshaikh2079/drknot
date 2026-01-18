@@ -7,6 +7,7 @@ Our vision at **DrKnot** is to create a seamless healthcare experience for every
 
 ## 🔗 Live Deployments
 
+> [!IMPORTANT]
 > <p align="left">
 >   <font color="#D97706"><i>Note: The backend server may require up to 60 seconds to initialize on the first request. Please refresh the page if the data does not load immediately.</i></font>
 > </p>
