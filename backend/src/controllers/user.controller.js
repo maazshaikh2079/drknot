@@ -132,6 +132,7 @@ const updateUserProfile = async (req, res) => {
       // const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
       const imageUpload = await cloudinary.uploader.upload(imageFile.buffer, {
         resource_type: "image",
+        folder: "drknot",
       });
       const imageURL = imageUpload.secure_url;
 
