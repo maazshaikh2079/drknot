@@ -5,9 +5,10 @@ import {
   getAllDoctors,
   appointmentsAdmin,
   appointmentCancel,
-  adminDashboard
+  adminDashboard,
 } from "../controllers/admin.controller.js";
 import { changeAvailablity } from "../controllers/doctor.controller.js";
+// import upload from "../middlewares/multer-local.js";
 import upload from "../middlewares/multer.js";
 import authAdmin from "../middlewares/authAdmin.js";
 

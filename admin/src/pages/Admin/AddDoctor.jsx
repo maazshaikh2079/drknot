@@ -92,7 +92,19 @@ const AddDoctor = () => {
             />
           </label>
           <input
-            onChange={(e) => setDocImg(e.target.files[0])}
+            // onChange={(e) => setDocImg(e.target.files[0])}
+            onChange={(e) => {
+              const file = e.target.files[0];
+              if (file) {
+                // Check if file size is greater than 2MB (2 * 1024 * 1024 bytes)
+                if (file.size > 2 * 1024 * 1024) {
+                  toast.error("Image size must be less than 2MB");
+                  e.target.value = null; // Reset the input
+                  return;
+                }
+                setImage(file);
+              }
+            }}
             type="file"
             name=""
             id="doc-img"

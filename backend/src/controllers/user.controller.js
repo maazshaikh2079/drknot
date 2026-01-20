@@ -129,7 +129,8 @@ const updateUserProfile = async (req, res) => {
 
     if (imageFile) {
       // upload image to cloudinary
-      const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
+      // const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
+      const imageUpload = await cloudinary.uploader.upload(imageFile.buffer, {
         resource_type: "image",
       });
       const imageURL = imageUpload.secure_url;

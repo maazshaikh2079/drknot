@@ -12,6 +12,7 @@ import {
   verifyRazorpay,
 } from "../controllers/user.controller.js";
 import authUser from "../middlewares/authUser.js";
+// import fileUpload from "../middlewares/multer-local.js";
 import fileUpload from "../middlewares/multer.js";
 
 const userRouter = express.Router();

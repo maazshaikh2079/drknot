@@ -1,27 +1,21 @@
 import mongoose from "mongoose";
 
-// A global variable to cache the connection
-let isConnected = false;
-
 const connectDB = async () => {
-  if (isConnected) {
-    console.log("log> Using existing MongoDB connection");
-    return;
-  }
-
   try {
-    const db = await mongoose.connect(
+    mongoose.connection.on("connected", () =>
+      console.log("log> MongoDB Connected Successfully!")
+    );
+
+    await mongoose.connect(
       `${process.env.MONGODB_URI}/${process.env.DB_NAME}`,
       {
         connectTimeoutMS: 10000,
         socketTimeoutMS: 45000,
       }
     );
-
-    isConnected = db.connections[0].readyState;
-    console.log("log> New MongoDB Connection Established!");
   } catch (error) {
     console.error("log> MongoDB Connection Error:", error.message);
+    throw error;
   }
 };
 
