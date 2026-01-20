@@ -128,6 +128,8 @@ const updateUserProfile = async (req, res) => {
     });
 
     if (imageFile) {
+      // delete previous user pfp image from cloudinary:-
+
       const user = await User.findById(userId);
 
       if (user.image && user.image.includes("cloudinary")) {
@@ -142,7 +144,7 @@ const updateUserProfile = async (req, res) => {
         }
       }
 
-      // upload image to cloudinary:-
+      // upload new user pfp image to cloudinary:-
 
       // const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
       //   resource_type: "image",
