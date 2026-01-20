@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import "dotenv/config";
 // import connectDB from "./config/mongodb-local.js";
-import connectDB from "./config/mongodb.js";
+import dbConn from "./config/mongodb.js";
 import connectCloudinary from "./config/cloudinary.js";
 
 const app = express();
@@ -16,8 +16,10 @@ app.use(express.json());
 app.use(cors());
 
 // Initialize external services
-connectDB();
+// connectDB(); // Local mongodb connections (mongodb-local.js)
 connectCloudinary();
+
+app.use(dbConn);
 
 // Routes
 import userRouter from "./routes/user.route.js";
