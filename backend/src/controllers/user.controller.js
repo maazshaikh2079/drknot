@@ -128,6 +128,20 @@ const updateUserProfile = async (req, res) => {
     });
 
     if (imageFile) {
+      const user = await User.findById(userId);
+
+      if (user.image && user.image.includes("cloudinary")) {
+        try {
+          const imgPublicId = user.image.split("/").pop().split(".")[0];
+          await cloudinary.uploader.destroy(`drknot/${imgPublicId}`);
+        } catch (delError) {
+          console.log(
+            "log> Old image deletion failed! Error:",
+            delError.message
+          );
+        }
+      }
+
       // upload image to cloudinary
       // const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
       const imageUpload = await cloudinary.uploader.upload(imageFile.buffer, {
