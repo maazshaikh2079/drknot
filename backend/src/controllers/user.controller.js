@@ -142,12 +142,22 @@ const updateUserProfile = async (req, res) => {
         }
       }
 
-      // upload image to cloudinary
+      // upload image to cloudinary:-
+
       // const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
-      const imageUpload = await cloudinary.uploader.upload(imageFile.buffer, {
+      //   resource_type: "image",
+      //   folder: "drknot",
+      // });
+
+      // Image File Buffer to Base64 Data URI
+      const imgFileBase64 = imageFile.buffer.toString("base64");
+      const imgFileDataUri = `data:${imageFile.mimetype};base64,${imgFileBase64}`;
+
+      const imageUpload = await cloudinary.uploader.upload(imgFileDataUri, {
         resource_type: "image",
         folder: "drknot",
       });
+
       const imageURL = imageUpload.secure_url;
 
       await User.findByIdAndUpdate(userId, { image: imageURL });
