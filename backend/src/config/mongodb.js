@@ -1,31 +1,14 @@
-// import mongoose from "mongoose";
-
-// // A global variable to cache the connection
-// let isConnected = false;
-
-// const connectDB = async () => {
-//   if (isConnected) {
-//     console.log("log> Using existing MongoDB connection");
-//     return;
-//   }
-
-//   try {
-//     const db = await mongoose.connect(
-//       `${process.env.MONGODB_URI}/${process.env.DB_NAME}`,
-//       {
-//         connectTimeoutMS: 10000,
-//         socketTimeoutMS: 45000,
-//       }
-//     );
-
-//     isConnected = db.connections[0].readyState;
-//     console.log("log> New MongoDB Connection Established!");
-//   } catch (error) {
-//     console.error("log> MongoDB Connection Error:", error.message);
-//   }
-// };
-
-// export default connectDB;
+/**
+ * NOTE: This is the database configuration optimized for PRODUCTION (Vercel).
+ * Strategy: Serverless-Friendly Connection Middleware.
+ * * Reason: Vercel functions are stateless and ephemeral. This file implements:
+ * 1. Connection Caching: Uses a global variable to reuse existing MongoDB connections
+ * across function "warm starts," preventing connection limit exhaustion.
+ * 2. Handshake Verification: Explicitly checks the 'readyState' of the connection
+ * to ensure the database is fully accessible before proceeding.
+ * 3. Cold Start Protection: Designed to handle the initial delay of serverless
+ * boot-up sequences without triggering "bufferCommands" errors.
+ */
 
 import mongoose from "mongoose";
 

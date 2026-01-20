@@ -1,3 +1,12 @@
+/**
+ * NOTE: This is the entry-point for LOCAL DEVELOPMENT (Persistent Server).
+ * Strategy: Traditional Monolithic App Architecture.
+ * * Reason: This setup is designed for long-running processes on your local machine.
+ * 1. Immediate Execution: Calls 'connectDB()' once during the startup phase.
+ * 2. Active Listening: Uses 'app.listen()' to lock a specific PORT for ongoing requests.
+ * 3. Terminal Logging: Provides detailed console feedback for real-time local debugging.
+ */
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";

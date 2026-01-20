@@ -1,3 +1,15 @@
+/**
+ * NOTE: This is the main entry-point optimized for VERCEL DEPLOYMENT.
+ * Strategy: Hybrid Serverless-Friendly Architecture.
+ * * Reason: Vercel executes code as ephemeral Serverless Functions. This file includes:
+ * 1. Global DB Middleware: Uses 'app.use(dbConn)' to ensure MongoDB connectivity
+ * before any API logic executes, preventing "bufferCommands" errors.
+ * 2. Conditional Listening: Only triggers 'app.listen()' if 'process.env.VERCEL'
+ * is missing, allowing the same file to be used in production and local testing.
+ * 3. Stateless Handling: Designed to initialize external services efficiently
+ * across transient function instances to stay within execution time limits.
+ */
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -17,9 +29,8 @@ app.use(cors());
 
 // Initialize external services
 // connectDB(); // Local mongodb connections (mongodb-local.js)
-connectCloudinary();
-
 app.use(dbConn);
+connectCloudinary();
 
 // Routes
 import userRouter from "./routes/user.route.js";
