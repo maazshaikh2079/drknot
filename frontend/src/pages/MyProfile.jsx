@@ -18,8 +18,7 @@ const MyProfile = () => {
 
       formData.append("name", userData.name);
       formData.append("phone", userData.phone);
-      // Stringifying address object to handle nested data in FormData
-      formData.append("address", JSON.stringify(userData.address));
+      formData.append("address", JSON.stringify(userData.address)); // Stringifying address object to handle nested data in FormData
       formData.append("gender", userData.gender);
       formData.append("dob", userData.dob);
       image && formData.append("image", image);
@@ -32,7 +31,7 @@ const MyProfile = () => {
 
       if (data.success) {
         toast.success(data.message);
-        await loadUserProfileData(); // Refresh MyProfile page with updated data from backend
+        await loadUserProfileData();
         setIsEditing(false);
         setImage(false);
       } else {
@@ -43,15 +42,6 @@ const MyProfile = () => {
       toast.error(error.message);
     }
   };
-
-  // Return loading state if userData is false or empty
-  // if (!userData) {
-  //   return (
-  //     <div className="min-h-[60vh] flex items-center justify-center">
-  //       <p className="text-gray-500 animate-pulse">Loading profile data...</p>
-  //     </div>
-  //   );
-  // }
 
   return userData ? (
     <div className="max-w-lg flex flex-col gap-2 text-sm">
@@ -71,7 +61,6 @@ const MyProfile = () => {
             />
           </div>
           <input
-            // onChange={(e) => setImage(e.target.files[0])}
             onChange={(e) => {
               const file = e.target.files[0];
               if (file) {
@@ -225,8 +214,47 @@ const MyProfile = () => {
       </div>
     </div>
   ) : (
-    <div className="min-h-[60vh] flex items-center justify-center">
-      <p className="text-gray-500 animate-pulse">Loading profile data...</p>
+    // Skeleton Loader matching the Profile Layout
+    <div className="max-w-lg flex flex-col gap-2 text-sm animate-pulse">
+      {/* PFP Skeleton */}
+      <div className="w-36 h-36 bg-slate-200 rounded"></div>
+
+      {/* Name Skeleton */}
+      <div className="h-8 w-1/2 bg-slate-200 rounded mt-4"></div>
+
+      <hr className="bg-slate-200 h-[1px] border-none" />
+
+      {/* Contact Info Skeleton */}
+      <div>
+        <div className="h-4 w-32 bg-slate-200 rounded mt-3"></div>
+        <div className="grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700">
+          <div className="h-4 w-16 bg-slate-200 rounded"></div>
+          <div className="h-4 w-48 bg-slate-200 rounded"></div>
+          <div className="h-4 w-16 bg-slate-200 rounded"></div>
+          <div className="h-4 w-32 bg-slate-200 rounded"></div>
+          <div className="h-4 w-16 bg-slate-200 rounded"></div>
+          <div className="flex flex-col gap-1">
+            <div className="h-4 w-40 bg-slate-200 rounded"></div>
+            <div className="h-4 w-40 bg-slate-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Basic Info Skeleton */}
+      <div>
+        <div className="h-4 w-32 bg-slate-200 rounded mt-3"></div>
+        <div className="grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700">
+          <div className="h-4 w-16 bg-slate-200 rounded"></div>
+          <div className="h-4 w-24 bg-slate-200 rounded"></div>
+          <div className="h-4 w-16 bg-slate-200 rounded"></div>
+          <div className="h-4 w-24 bg-slate-200 rounded"></div>
+        </div>
+      </div>
+
+      {/* Button Skeleton */}
+      <div className="mt-10">
+        <div className="h-10 w-32 bg-slate-200 rounded-full"></div>
+      </div>
     </div>
   );
 };

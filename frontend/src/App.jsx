@@ -26,7 +26,6 @@ function App() {
         <Route path="/appointment/:docId" element={<Appointment />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/auth" element={<Auth />} /> */}
         <Route path="/auth/:authMode" element={<Auth />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/my-profile" element={<MyProfile />} />

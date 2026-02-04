@@ -32,73 +32,111 @@ const AllAppointments = () => {
         </div>
 
         {/* Table Body */}
-        {appointments.map((appointment, index) => (
-          <div
-            className="flex flex-wrap justify-between gap-2 sm:grid sm:grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] items-center text-gray-500 py-3 px-6 border-b border-gray-100 hover:bg-gray-50/80 transition-colors"
-            key={appointment._id || index}
-          >
-            {/* Index - Hidden on Mobile */}
-            <p className="hidden sm:block">{index + 1}</p>
+        {appointments && appointments.length > 0
+          ? // Render Actual Appointments
+            appointments.map((appointment, index) => (
+              <div
+                className="flex flex-wrap justify-between gap-2 sm:grid sm:grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] items-center text-gray-500 py-3 px-6 border-b border-gray-100 hover:bg-gray-50/80 transition-colors"
+                key={appointment._id || index}
+              >
+                {/* Index - Hidden on Mobile */}
+                <p className="hidden sm:block">{index + 1}</p>
 
-            {/* Patient Info */}
-            <div className="flex items-center gap-2">
-              <img
-                src={appointment.userData.image}
-                className="w-8 h-8 rounded-full object-cover bg-gray-100"
-                alt="patient"
-              />
-              <p className="text-gray-900 font-medium">
-                {appointment.userData.name}
-              </p>
-            </div>
+                {/* Patient Info */}
+                <div className="flex items-center gap-2">
+                  <img
+                    src={appointment.userData.image}
+                    className="w-8 h-8 rounded-full object-cover bg-gray-100"
+                    alt="patient"
+                  />
+                  <p className="text-gray-900 font-medium">
+                    {appointment.userData.name}
+                  </p>
+                </div>
 
-            {/* Age - Hidden on Mobile */}
-            <p className="hidden sm:block">
-              {calculateAge(appointment.userData.dob)}
-            </p>
-
-            {/* Date & Time */}
-            <p>
-              {slotDateFormat(appointment.slotDate)}, {appointment.slotTime}
-            </p>
-
-            {/* Doctor Info */}
-            <div className="flex items-center gap-2">
-              <img
-                src={appointment.docData.image}
-                className="w-8 h-8 rounded-full bg-gray-100 object-cover"
-                alt="doctor"
-              />
-              <p className="text-gray-900">{appointment.docData.name}</p>
-            </div>
-
-            {/* Amount */}
-            <p className="font-medium text-gray-700">
-              {currency}
-              {appointment.amount}
-            </p>
-
-            {/* Status Actions */}
-            <div className="flex justify-center">
-              {appointment.cancelled ? (
-                <p className="text-red-400 text-xs font-medium bg-red-50 px-2 py-1 rounded">
-                  Cancelled
+                {/* Age - Hidden on Mobile */}
+                <p className="hidden sm:block">
+                  {calculateAge(appointment.userData.dob)}
                 </p>
-              ) : appointment.isCompleted ? (
-                <p className="text-green-500 text-xs font-medium bg-green-50 px-2 py-1 rounded">
-                  Completed
+
+                {/* Date & Time */}
+                <p>
+                  {slotDateFormat(appointment.slotDate)}, {appointment.slotTime}
                 </p>
-              ) : (
-                <img
-                  onClick={() => cancelAppointment(appointment._id)}
-                  className="w-8 cursor-pointer hover:scale-110 transition-transform"
-                  src={assets.cancel_icon}
-                  alt="cancel"
-                />
-              )}
-            </div>
-          </div>
-        ))}
+
+                {/* Doctor Info */}
+                <div className="flex items-center gap-2">
+                  <img
+                    src={appointment.docData.image}
+                    className="w-8 h-8 rounded-full bg-gray-100 object-cover"
+                    alt="doctor"
+                  />
+                  <p className="text-gray-900">{appointment.docData.name}</p>
+                </div>
+
+                {/* Amount */}
+                <p className="font-medium text-gray-700">
+                  {currency}
+                  {appointment.amount}
+                </p>
+
+                {/* Status Actions */}
+                <div className="flex justify-center">
+                  {appointment.cancelled ? (
+                    <p className="text-red-400 text-xs font-medium bg-red-50 px-2 py-1 rounded">
+                      Cancelled
+                    </p>
+                  ) : appointment.isCompleted ? (
+                    <p className="text-green-500 text-xs font-medium bg-green-50 px-2 py-1 rounded">
+                      Completed
+                    </p>
+                  ) : (
+                    <img
+                      onClick={() => cancelAppointment(appointment._id)}
+                      className="w-8 cursor-pointer hover:scale-110 transition-transform"
+                      src={assets.cancel_icon}
+                      alt="cancel"
+                    />
+                  )}
+                </div>
+              </div>
+            ))
+          : // Render Skeleton Rows (Loading State)
+            [...Array(10)].map((_, index) => (
+              <div
+                key={index}
+                className="flex flex-wrap justify-between gap-2 sm:grid sm:grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] items-center py-3 px-6 border-b border-gray-100 animate-pulse"
+              >
+                {/* Index Skeleton */}
+                <div className="hidden sm:block h-4 w-4 bg-gray-200 rounded"></div>
+
+                {/* Patient Skeleton */}
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+                  <div className="h-4 w-24 bg-gray-200 rounded"></div>
+                </div>
+
+                {/* Age Skeleton */}
+                <div className="hidden sm:block h-4 w-8 bg-gray-200 rounded"></div>
+
+                {/* Date Skeleton */}
+                <div className="h-4 w-32 bg-gray-200 rounded"></div>
+
+                {/* Doctor Skeleton */}
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+                  <div className="h-4 w-24 bg-gray-200 rounded"></div>
+                </div>
+
+                {/* Fees Skeleton */}
+                <div className="h-4 w-12 bg-gray-200 rounded"></div>
+
+                {/* Action Skeleton */}
+                <div className="flex justify-center">
+                  <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
+                </div>
+              </div>
+            ))}
       </div>
     </div>
   );

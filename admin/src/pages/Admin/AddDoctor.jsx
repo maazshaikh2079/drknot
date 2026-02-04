@@ -70,8 +70,6 @@ const AddDoctor = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      //   toast.error(error.message);
-      //   console.log(error);
       const errorMsg = error.response?.data?.message || "Something went wrong";
       toast.error(errorMsg);
       console.log("log> Submission Error:", errorMsg);
@@ -92,7 +90,6 @@ const AddDoctor = () => {
             />
           </label>
           <input
-            // onChange={(e) => setDocImg(e.target.files[0])}
             onChange={(e) => {
               const file = e.target.files[0];
               if (file) {

@@ -12,17 +12,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  //   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const { backendUrl } = useContext(AppContext);
 
   const { setAtoken } = useContext(AdminContext);
   const { setDtoken } = useContext(DoctorContext);
-
-  // ADMIN_EMAIL = "admin@drknot.com"
-  // ADMIN_PASSWORD = "admin1234"
-
-  // Doc Email: drrichard@demo.com
-  // doc password: drrichard1234
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -40,11 +33,9 @@ const Login = () => {
       if (data.success) {
         setAtoken(data.atoken);
         localStorage.setItem("atoken", data.atoken);
-        // alert(`Admin logged-in!\natoken: ${data.atoken}`);
         // toast.success(`Admin logged-in! atoken: ${data.atoken}`);
       } else {
         toast.error(data.message);
-        // alert(data.message);
       }
     } else if (loginMode === "Doctor") {
       const { data } = await axios.post(
@@ -59,12 +50,10 @@ const Login = () => {
       if (data.success) {
         setDtoken(data.dtoken);
         localStorage.setItem("dtoken", data.dtoken);
-        // alert(`Doctor logged-in!\ndtoken: ${data.dtoken}`);
         // toast.success(`Doctor logged-in!\natoken: ${data.dtoken}`);
       } else {
         toast.error(data.message);
       }
-      // alert("TODO: make doc login-in ");
     }
   };
 

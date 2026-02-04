@@ -7,15 +7,10 @@ import { AppContext } from "../context/AppContext.jsx";
 import { useContext } from "react";
 
 const Auth = () => {
-  //   const [authMode, setAuthMode] = useState(auth_mode);
-
   const navigate = useNavigate();
   const { backendUrl, token, setToken } = useContext(AppContext);
 
   const { authMode } = useParams();
-
-  // let { authMode } = useParams();
-  // if (!authMode) authMode = "Sign-In";
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,8 +20,6 @@ const Auth = () => {
     event.preventDefault();
 
     if (authMode === "Sign-In") {
-      // email && password && console.log("User Logged-In!");
-      // alert("User Logged-In!");
       const { data } = await axios.post(backendUrl + "/api/user/login", {
         email,
         password,
@@ -36,13 +29,10 @@ const Auth = () => {
         localStorage.setItem("token", data.token);
         setToken(data.token);
         alert("User Logged-In!");
-        // navigate("/");
       } else {
         toast.error(data.message);
       }
     } else {
-      // name && email && password && console.log("User Registered!");
-      // alert("User Registered!");
       const { data } = await axios.post(backendUrl + "/api/user/register", {
         name,
         email,
@@ -53,7 +43,6 @@ const Auth = () => {
         localStorage.setItem("token", data.token);
         setToken(data.token);
         alert("User Registered!");
-        // navigate("/");
       } else {
         toast.error(data.message);
       }
@@ -67,7 +56,6 @@ const Auth = () => {
   }, [token]);
 
   return (
-    // border
     <form
       onSubmit={onSubmitHandler}
       className=" min-h-[80vh] flex items-center"
@@ -116,10 +104,6 @@ const Auth = () => {
           />
         </div>
 
-        {/* <button  type="submit" className="bg-primary text-white w-full py-2 rounded-md text-base">
-          {authMode === "Sign-In" ? "Login" : "Register"}
-        </button> */}
-
         <input
           type="submit"
           value={authMode === "Sign-In" ? "Login" : "Register"}
@@ -130,7 +114,6 @@ const Auth = () => {
           <p>
             Create a new account?{" "}
             <span
-              //   onClick={() => setAuthMode("Sign-Up")}
               onClick={() => navigate("/auth/Sign-Up")}
               className="text-primary underline cursor-pointer"
             >
@@ -141,7 +124,6 @@ const Auth = () => {
           <p>
             Already have an account?{" "}
             <span
-              //   onClick={() => setAuthMode("Sign-In")}
               onClick={() => navigate("/auth/Sign-In")}
               className="text-primary underline cursor-pointer"
             >

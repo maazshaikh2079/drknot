@@ -90,8 +90,8 @@ const Appointment = () => {
 
         // // Add slot to array
         // timeSlots.push({
-        //   datetime: new Date(currentDate),
-        //   time: formattedTime,
+        //    datetime: new Date(currentDate),
+        //    time: formattedTime,
         // });
 
         // Add available(unbooked) time slots to array `timeSlots`
@@ -123,15 +123,15 @@ const Appointment = () => {
   }, [docSlots, slotIndex]);
 
   // const bookAppointment = async () => {
-  //   const date = docSlots[slotIndex][0].datetime;
+  //    const date = docSlots[slotIndex][0].datetime;
 
-  //   let day = date.getDate();
-  //   let month = date.getMonth() + 1; // JAN = 0 and DEC = 11
-  //   let year = date.getFullYear();
+  //    let day = date.getDate();
+  //    let month = date.getMonth() + 1; // JAN = 0 and DEC = 11
+  //    let year = date.getFullYear();
 
-  //   const slotDate = `${day}-${month}-${year}`;
-  //   console.log(slotDate, slotTime);
-  //   alert(`Appointment Booked!\nDate: ${slotDate}, Time: ${slotTime}`);
+  //    const slotDate = `${day}-${month}-${year}`;
+  //    console.log(slotDate, slotTime);
+  //    alert(`Appointment Booked!\nDate: ${slotDate}, Time: ${slotTime}`);
   // };
 
   const bookAppointment = async () => {
@@ -277,7 +277,65 @@ const Appointment = () => {
       {/* Listing Related Doctors */}
       <RelatedDoctors speciality={docInfo.speciality} docId={docId} />
     </div>
-  ) : null;
+  ) : (
+    // Skeleton Loading State
+    <div className="animate-pulse">
+      {/* ---------- Doctor Details Card Skeleton ----------- */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        {/* Image Skeleton */}
+        <div className="bg-slate-200 w-full sm:max-w-72 h-80 rounded-lg"></div>
+
+        {/* Info Skeleton */}
+        <div className="flex-1 border border-gray-300 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
+          {/* Name & Badge */}
+          <div className="h-9 w-1/2 bg-slate-200 rounded mb-2"></div>
+          {/* Degree & Experience */}
+          <div className="h-4 w-1/4 bg-slate-200 rounded mb-6"></div>
+
+          {/* About */}
+          <div className="h-4 w-16 bg-slate-200 rounded mb-2"></div>
+          <div className="h-3 w-full bg-slate-200 rounded mb-2"></div>
+          <div className="h-3 w-full bg-slate-200 rounded mb-2"></div>
+          <div className="h-3 w-3/4 bg-slate-200 rounded mb-6"></div>
+
+          {/* Fees */}
+          <div className="h-4 w-32 bg-slate-200 rounded mb-5"></div>
+
+          {/* Availability */}
+          <div className="h-4 w-24 bg-slate-200 rounded"></div>
+        </div>
+      </div>
+
+      {/* ------------- Booking slots Skeleton ------------- */}
+      <div className="sm:ml-72 sm:pl-4 mt-4">
+        {/* Title */}
+        <div className="h-6 w-32 bg-slate-200 rounded mb-4"></div>
+
+        {/* Days Row */}
+        <div className="flex gap-3 overflow-hidden mb-4">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="h-24 w-16 bg-slate-200 rounded-full shrink-0"
+            ></div>
+          ))}
+        </div>
+
+        {/* Times Row */}
+        <div className="flex gap-3 overflow-hidden mb-6">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="h-10 w-24 bg-slate-200 rounded-full shrink-0"
+            ></div>
+          ))}
+        </div>
+
+        {/* Button */}
+        <div className="h-12 w-56 bg-slate-200 rounded-full my-6"></div>
+      </div>
+    </div>
+  );
 };
 
 export default Appointment;

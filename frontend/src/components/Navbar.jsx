@@ -52,14 +52,17 @@ const Navbar = () => {
       </ul>
 
       <div className=" flex items-center gap-4 ">
-        {token && userData ? (
+        {token ? ( // && userData
           // PFP and Popup Menu (if logged in)
           <div className=" flex items-center gap-2 cursor-pointer group relative">
             {/* PFP */}
             {/* <img className="w-8.5 h-8.5 rounded-full object-cover bg-gray-100" src={profile_pic} alt="" /> */}
             <img
               className="w-8.5 h-8.5 rounded-full object-cover bg-gray-100"
-              src={userData.image}
+              src={
+                userData.image ||
+                `https://i.ibb.co/vxLH9d92/default-avatar-light.png`
+              }
               alt=""
             />
             <img className="w-2.5" src={dropdown_icon} alt="" />
